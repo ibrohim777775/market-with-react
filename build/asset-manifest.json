@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.92b2ba39.chunk.css",
+    "main.js": "/static/js/main.0fd079be.chunk.js",
+    "main.js.map": "/static/js/main.0fd079be.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4002faf3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4002faf3.js.map",
+    "static/css/2.27175f2b.chunk.css": "/static/css/2.27175f2b.chunk.css",
+    "static/js/2.3ae1b82e.chunk.js": "/static/js/2.3ae1b82e.chunk.js",
+    "static/js/2.3ae1b82e.chunk.js.map": "/static/js/2.3ae1b82e.chunk.js.map",
+    "static/js/3.b9d07190.chunk.js": "/static/js/3.b9d07190.chunk.js",
+    "static/js/3.b9d07190.chunk.js.map": "/static/js/3.b9d07190.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.27175f2b.chunk.css.map": "/static/css/2.27175f2b.chunk.css.map",
+    "static/css/main.92b2ba39.chunk.css.map": "/static/css/main.92b2ba39.chunk.css.map",
+    "static/js/2.3ae1b82e.chunk.js.LICENSE.txt": "/static/js/2.3ae1b82e.chunk.js.LICENSE.txt",
+    "static/media/Burger.1c37485b.svg": "/static/media/Burger.1c37485b.svg",
+    "static/media/style.css": "/static/media/TTHoves-Regular.495bcecc.woff",
+    "static/media/stylesheet.css": "/static/media/TTNormsPro-ThinItalic.c4468192.ttf",
+    "static/media/car.7ef640ec.svg": "/static/media/car.7ef640ec.svg",
+    "static/media/carIcon.17f447ef.svg": "/static/media/carIcon.17f447ef.svg",
+    "static/media/comments.015bc95d.svg": "/static/media/comments.015bc95d.svg",
+    "static/media/displayWithClock.3990d204.svg": "/static/media/displayWithClock.3990d204.svg",
+    "static/media/displayWithClockGreen.9f04f9be.svg": "/static/media/displayWithClockGreen.9f04f9be.svg",
+    "static/media/header_bg.eaaf0ab1.svg": "/static/media/header_bg.eaaf0ab1.svg",
+    "static/media/logo.f938e089.svg": "/static/media/logo.f938e089.svg",
+    "static/media/no-image.c875b81c.svg": "/static/media/no-image.c875b81c.svg",
+    "static/media/notes.fdb021e0.svg": "/static/media/notes.fdb021e0.svg",
+    "static/media/notesGreen.d8f539a9.svg": "/static/media/notesGreen.d8f539a9.svg",
+    "static/media/pigWithDollor.e8f4a5ff.svg": "/static/media/pigWithDollor.e8f4a5ff.svg",
+    "static/media/user-avatar.91780509.svg": "/static/media/user-avatar.91780509.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4002faf3.js",
+    "static/css/2.27175f2b.chunk.css",
+    "static/js/2.3ae1b82e.chunk.js",
+    "static/css/main.92b2ba39.chunk.css",
+    "static/js/main.0fd079be.chunk.js"
+  ]
+}
