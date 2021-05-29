@@ -1,0 +1,20 @@
+.support__title{
+  margin: 45px 0 45px 0;
+}
+.support__text{
+  width: 672px;
+  height: 174px;
+  background-color: #f9f9f9;
+  font-size: 20px;
+  padding: 10px 20px;
+  resize: none;
+  border-radius: var(--bor-radius);
+  border:none
+}
+.support__text:focus{
+  border:none;
+  outline: none;
+}
+.support__btn{
+  margin: 45px 0 200px 0;
+}

@@ -1,0 +1,19 @@
+@media screen and (max-width:900px){
+  .header__items{
+    display: none;
+  }
+}
+.header__items{
+  margin: 39px 0;
+}
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+}
+.header__links{
+  margin-right: 45px;
+}
+.header_links-item{
+  font-size: 18px;
+  font-weight: 500;
+}

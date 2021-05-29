@@ -1,0 +1,31 @@
+
+body{
+    font-family: 'TT Norms Pro';
+    font-weight: 400;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media screen and (max-width:900px){
+    .container{
+        width: 100%;
+    }
+}
+@media screen and (max-width:310px){
+    .container{
+        width: 100%;
+    }
+}
+.main__video{
+  margin: 60px 0 60px 0;
+}

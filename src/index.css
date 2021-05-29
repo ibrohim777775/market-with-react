@@ -1,0 +1,40 @@
+
+:root{
+  --card-title-font-size: 15px;
+  --card-title-font-weight: 500;
+  --main-color: #000;
+  --main-font-size: 13px;
+  --main-font-weight: 400;
+  --green: #00AC4E; 
+  --btn-font-weight: 500;
+  --light-grey: #f1f1f1;
+  --white: #fff;
+  --grey: #333333;
+  --grey-three: #828282;
+  --bor-radius: 5px;
+  --font-norms: 'TT Norms Pro';
+ 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'TT Norms Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--main-color);
+  font-weight: var(--main-font-weight);
+  /* position: relative; */
+}
+ h1{
+    font-size: 28px;
+    color: #000;
+    font-weight: 500;
+  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

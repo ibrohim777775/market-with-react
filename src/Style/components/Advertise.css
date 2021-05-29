@@ -1,0 +1,17 @@
+.advertise{
+  width: 994px;
+  height: 254px;
+  background-color: #F1F1FB;
+  border-radius: 18px;
+  display: flex;
+  margin-bottom: 60px;
+}
+.advertise__inners{
+  margin: 32px 41px 0 40px;
+}
+.advertise__title{
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--grey);
+  margin: 0 0 34px 0;
+}

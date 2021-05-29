@@ -1,0 +1,24 @@
+.main__bg{
+  background-color: var(--light-grey);
+  height: 253px;
+  border-radius: var(--bor-radius);
+  display: flex;
+  justify-content: space-between;
+}
+.main__bg-items{
+  margin: 40px 0 0 40px ;
+}
+.main__bg-title{
+  font-weight: 400;
+  font-size: 31px;
+  color: var(--grey);
+  line-height: 41px;
+  margin: 0 0 6px 0;
+}
+.main__bg-text{
+  font-size: 20px;
+  color: #828282;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0 0 32px 0;
+}

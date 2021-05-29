@@ -1,0 +1,45 @@
+.user__auth{
+  width: 384px;
+  height: 533px;
+}
+input .auth__input-phone, .auth__input-password{
+  box-sizing: border-box;
+  width: 289px;
+  height: 54px;
+}
+.auth__input-password.mb{
+  margin-bottom: 27px;
+}
+.info__toEmail{
+  margin-top: 12px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: ;
+}
+.circle{
+  width: 11px;
+  height: 11px;
+  background-color: #fcfcfc;
+  border: 2px solid #ebebeb;
+  border-radius: 50%;
+  margin-right: 16px;
+  cursor: pointer;
+}
+.toEmail__text{
+  font-size: 9px;
+  line-height: 14px;
+  color: #C6C6C6;
+}
+.toEmail__text a{
+  color: #00AC4E;
+}
+.info__toEmail.second{
+  align-items: flex-start;
+}
+.login__btn{
+  margin-top: 22px;
+}
+.circle--bg{
+  background: #000;
+}

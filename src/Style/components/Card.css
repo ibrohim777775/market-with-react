@@ -1,0 +1,38 @@
+
+.card__title{
+  margin: 16px 0 5px 0;
+}
+.card__title-text{
+  font-size: var(--card-title-font-size);
+  font-weight: var(--card-title-font-weight);
+}
+.text__inner{
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.card__rate{
+  margin: 12px 0 10px 0;
+}
+.star{
+  color: var(--green);
+}
+.unlike{
+  border: none;
+  color: #c5bebe;
+  font-size: 16px;
+}
+.card__price{
+  display: flex;
+  align-items: center;
+}
+.price__item{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  margin: 0 18px 0 0;
+}
+.price__inner{
+  font-size: 13px;
+  color: var(--grey-three);
+}

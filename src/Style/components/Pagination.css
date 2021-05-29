@@ -1,0 +1,25 @@
+.pagination__inner{
+  display: flex;
+  justify-content: center;
+}
+.pagination__items{
+  display: flex;
+  align-items: center;
+}
+.pagination__btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  color: #000;
+  width: 41px;
+  height: 41px;
+  font-size: 20px;
+}
+.pagination__items p{
+  font-size: 25px;
+}
+.active{
+  background-color: var(--green);
+  color: #fff;
+}

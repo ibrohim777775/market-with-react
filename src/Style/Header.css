@@ -1,0 +1,94 @@
+
+.header{
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
+
+}
+.header__body{
+  display: flex;
+}
+.header__info{
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 39px;
+}
+.info__phone{
+  display: flex;
+  margin-right: 65px;
+}
+.icon__phone{
+  font-size: 18px;
+  margin: 0 5px;
+  color: #00AC4E;
+}
+.phone__number{
+  font-weight: 500;
+  font-size: 18px;
+}
+.user__icon{
+  color: #00AC4E;
+  font-size: 29px;
+  margin-top: -2px;
+  margin-bottom: -5px;
+  cursor: pointer;
+}
+.shopping__cart{
+  position: relative;
+}
+.basket__total{
+  position: absolute;
+  right: -5px;
+  bottom: -10px;
+}
+.shopping__icon{
+  font-size: 25px;
+  margin-left: 31px;
+  margin-top: 0;
+}
+.burger{
+  display: none;
+}
+@media screen and (max-width:900px){
+  .phone__number{
+    display: none;
+  }
+  .burger{
+    display: block;
+    margin-right: 50px;
+  }
+  .logo__img{
+    margin-right: 0;
+  }
+  .icon__phone{
+    font-size: 18px;
+    margin-left: 0;
+    margin-right: 25px;
+  }
+  .user__icon{
+    font-size: 20px;
+    margin: 0;
+  }
+  .mr{
+    margin-right: 25px;
+  }
+  .info__phone{
+    margin: 0;
+  }
+  .header__info{
+    /* justify-content: space-between; */
+  }
+  .header__body{
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width:365px){
+  .burger{
+    margin-right: 15px;
+  }
+  .icon__phone, .mr{
+    margin-right: 15px;
+  }
+}
