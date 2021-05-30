@@ -1,39 +1,31 @@
 import React, { Component, useContext, useEffect, useState } from "react";
-import pigWithCoin from "../Assets/images/pigWithDollor.svg";
-import carIcon from "../Assets/images/carIcon.svg";
-import products from "../db/products";
+import { Link } from "react-router-dom";
+// import products from "../db/products";
 
-import { ShoppingCartStyled, Btn, } from "../Style/containers/ShoppingCartStyled";
+import carIcon from "../Assets/images/carIcon.svg";
+import pigWithCoin from "../Assets/images/pigWithDollor.svg";
+
 import { UserConsumer, BasketContext } from "../context/basket";
 import Button from "../Components/Button";
 import BasketList from "../Components/BasketList";
-import { Link } from "react-router-dom";
+
+import { ShoppingCartStyled, Btn, } from "../Style/containers/ShoppingCartStyled";
+import { useDispatch, useSelector } from "react-redux";
+
 
 const ShoppingCart = () => {
   const { shopCart, setShopCart, deleteItem } = useContext(BasketContext);
   const [shopTotal, setShopTotal] = useState(0);
   // static contextType UserContextComponent;
-
-
-  // console.log(shopCart);
-  // console.log(context);
-  // console.log(shopCart)
-
-  // useEffect(() => {
-  //   shopCart.map((item) => {
-  //     const ggo = products.filter((product) => product.id === item.id);
-  //     items.push(...ggo);
-  //     // console.log(items);
-  //   })
-  // }, [shopCart]);
+  const dispatch = useDispatch();
+  const basketStore = useSelector(state => state || {});
 
   const basketTotal = () => {
 
     let sum = shopTotal;
     let sumBasket = 0;
     shopCart.map((item) => {
-      // const ggo = products.filter((product) => product.id === item.id);
-      // shopPrice += item.count * ggo[0].price;
+
       sum = item.count * item.id;
       sumBasket += sum;
     });

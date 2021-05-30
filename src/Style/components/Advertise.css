@@ -1,5 +1,6 @@
 .advertise{
-  width: 994px;
+  width: 100%;
+  max-width: 994px;
   height: 254px;
   background-color: #F1F1FB;
   border-radius: 18px;

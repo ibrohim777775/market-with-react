@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { StyledMain } from "../Style/containers/StyledMainPresent";
-import "../Style/components/mainPresent.css";
 import Button from "./Button";
 import BgFor from "../Assets/images/header_bg.svg";
+
+import { StyledMain } from "../Style/containers/StyledMainPresent";
+import "../Style/components/mainPresent.css";
+
 
 class MainPresent extends Component {
   render() {

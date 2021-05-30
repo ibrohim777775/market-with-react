@@ -1,4 +1,5 @@
 import React, { Component, useContext, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import Advertise from "../Components/Advertise";
 import Card from "../Components/Card";
 import MainPresent from "../Components/MainPresent";
@@ -11,6 +12,7 @@ import "../Style/containers/main.css";
 const Main = () => {
   const allItems = ["Все товары", "Все товары категории"];
   const [items, setItems] = useState([]);
+  const basketStore = useSelector(state => state || []);
 
   const fetchItems = (area) => {
     fetch(`https://themealdb.p.rapidapi.com/filter.php?a=${area}`, {
@@ -33,6 +35,8 @@ const Main = () => {
   useEffect(() => {
     fetchItems('American')
   }, []);
+
+  console.log(basketStore)
   return (
     <div>
       <MainPresent />
@@ -45,7 +49,7 @@ const Main = () => {
             title={item.strMeal}
             img={item.strMealThumb}
             desc="Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить."
-            price={item.idMeal}
+            price={item.idMeal / 100}
             rate={Math.random * 10}
             size={1}
             sizeType='kg'

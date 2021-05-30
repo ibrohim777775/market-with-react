@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import "../Style/components/Advertise.css";
 import Button from "./Button";
 import car from "../Assets/images/car.svg";
+
+import "../Style/components/Advertise.css";
+
 
 class Advertise extends Component {
   render() {

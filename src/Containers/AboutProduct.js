@@ -13,10 +13,12 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Link, useParams } from "react-router-dom";
 import Advertise from "../Components/Advertise";
 import AddComment from "../Components/AddComment";
+import { useDispatch, useSelector } from "react-redux";
+import { BasketContext } from "../context/basket";
+import { addToBasket } from "../store/basket";
 
 import 'react-tabs/style/react-tabs.css';
 import { StyledDiv } from "../Style/containers/AboutProductStyled.js";
-import { BasketContext } from "../context/basket";
 
 function AboutProduct() {
   const { shopCart, setShopCart } = useContext(BasketContext);
@@ -24,6 +26,9 @@ function AboutProduct() {
   const [text, setText] = useState('В корзину');
   const [item, setItem] = useState({})
   const [count, setCount] = useState(1);
+  const dispatch = useDispatch();
+  const basketStore = useSelector(state => state || [])
+
 
   const getProductInfo = (id) => {
     fetch(`https://themealdb.p.rapidapi.com/lookup.php?i=${id}`, {
@@ -51,11 +56,17 @@ function AboutProduct() {
 
   const [displayIsNone, setDisplay] = useState(false);
   const addToBasket = () => {
-    if (!shopCart.find((prod) => prod.id === id)) {
-      // const fakeCart = shopCart;
-      // fakeCart.push();
-      setShopCart([...shopCart, { id: id, count: count }]);
-    }
+    // if (!shopCart.find((prod) => prod.id === id)) {
+    //   setShopCart([...shopCart, { id: id, count: count }]);
+    // }
+    const payload = {
+      id,
+      name: item.strMeal,
+      img: item.strMealThumb,
+      price: id,
+      count
+    };
+    dispatch(addToBasket(payload))
     setText('Оформлять');
 
 

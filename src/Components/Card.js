@@ -1,28 +1,34 @@
 import React, { Component, useContext, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import { StyledCard } from "../Style/components/CardStyled";
-import "../Style/components/Card.css";
 import noImg from "../Assets/images/no-image.svg";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-import UserContextComponent, { BasketContext } from "../context/basket";
+// import UserContextComponent, { BasketContext } from "../context/basket";
+import { addCount, addToBasket, updateTotals } from '../store/basket';
+
+import "../Style/components/Card.css";
+import { StyledCard } from "../Style/components/CardStyled";
+
 
 const Card = (props) => {
-  const { shopCart, setShopCart } = useContext(BasketContext);
+  // const { shopCart, setShopCart } = useContext(BasketContext);
   const { title, img, desc, price, rate, size, sizeType } = props;
   const [text, setText] = useState('В корзину');
+  const dispatch = useDispatch();
 
 
   const clickHandler = () => {
-    if (!shopCart.find((prod) => prod.id === props.id)) {
-      // const fakeCart = shopCart;
-      // fakeCart.push();
-      setShopCart([...shopCart, { id: props.id, count: 1 }]);
-    }
-    setText('Оформлять');
-    // setShopCart({ ...shopCart, id: props.id, count: 1 })
-    // console.log(id, 'product id')
+    // if (!shopCart.find((prod) => prod.id === props.id)) {
+
+    //   setShopCart([...shopCart, { id: props.id, count: 1 }]);
+    // }
+    dispatch(addToBasket(props));
+    dispatch(updateTotals());
+    setText('Купить');
+
   };
+  // console.log(basketStore)
   // console.log(props)
   // console.log(shopCart);
 

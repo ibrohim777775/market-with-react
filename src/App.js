@@ -11,6 +11,8 @@ import NewUserReg from "./Components/NewUserReg";
 import Footer from "./Components/Footer";
 import "./Style/App.css";
 import Main from "./Containers/Main";
+import { Provider } from "react-redux";
+import basket from "./store/basket";
 
 function App() {
   const [authDisplay, setAuthDisplay] = useState("none");
@@ -43,39 +45,41 @@ function App() {
   };
 
   return (
-    <UserContext>
-      <div>
-        <BrowserRouter>
-          <Header showAuth={showAuth} headerItems={HeaderMenuItems} />
-          <UserAuth
-            showAuth={showAuth}
-            authDisplay={authDisplay}
-            showNewUser={showNewUser}
-          />
-          <NewUserReg newUserDisp={newUserDisp} showNewUser={showNewUser} />
-          <main>
-            <div className="container">
-              {/* <Main /> */}
-              <Route key="header" exact={true} path="/home" component={Main} />
-              {routes.map((item, index) => (
-                <Route
-                  key={index}
-                  exact={item.exact}
-                  path={item.path}
-                  component={item.component}
-                />
-              ))}
-              <Redirect to="/home" />
-            </div>
-          </main>
-          <Footer
-            showAuth={showAuth}
-            authDisplay={authDisplay}
-            showNewUser={showNewUser}
-          />
-        </BrowserRouter>
-      </div>
-    </UserContext>
+    <Provider store={basket}>
+      <UserContext>
+        <div>
+          <BrowserRouter>
+            <Header showAuth={showAuth} headerItems={HeaderMenuItems} />
+            <UserAuth
+              showAuth={showAuth}
+              authDisplay={authDisplay}
+              showNewUser={showNewUser}
+            />
+            <NewUserReg newUserDisp={newUserDisp} showNewUser={showNewUser} />
+            <main>
+              <div className="container">
+                {/* <Main /> */}
+                {/* <Route key="header" exact={true} path="/home" component={Main} /> */}
+                {routes.map((item, index) => (
+                  <Route
+                    key={index}
+                    exact={item.exact}
+                    path={item.path}
+                    component={item.component}
+                  />
+                ))}
+                <Redirect to="/home" />
+              </div>
+            </main>
+            <Footer
+              showAuth={showAuth}
+              authDisplay={authDisplay}
+              showNewUser={showNewUser}
+            />
+          </BrowserRouter>
+        </div>
+      </UserContext>
+    </Provider>
   );
 }
 

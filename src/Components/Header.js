@@ -8,17 +8,18 @@ import Burger from "../Assets/images/Burger.svg";
 
 import { BasketContext } from "../context/basket";
 import "../Style/Header.css";
+import { useSelector } from "react-redux";
 
 const Header = (props) => {
   const { shopCart, setShopCart } = useContext(BasketContext);
   const [total, setTotal] = useState(0);
+  const store = useSelector(state => state || {})
   // console.log(shopCart, "headerdan");
-  useEffect(() => {
-    setTotal(shopCart.length);
-    // console.log("ishladiii", total);
-  }, [shopCart]);
+  // console.log("ishladiii", total);
   // console.log(shopCart, "cominnnggg");
   // console.log(this.context, "header is coming");
+  // console.log(basketStore.total.totalBasket)
+  // console.log(basketTotal, 'totalll')
   return (
     <React.Fragment>
       <header className="header">
@@ -41,7 +42,7 @@ const Header = (props) => {
               <div className="shopping__cart" >
                 <Link to='/shopping-cart'>
                   <FiShoppingCart className="user__icon shopping__icon" />
-                  <p className='basket__total'>{total}</p>
+                  <p className='basket__total'>{store.total ? store.total.totalBasket : ''}</p>
                 </Link>
               </div>
             </div>

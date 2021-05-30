@@ -4,7 +4,7 @@ import { BasketContext } from "../context/basket";
 import products from "../db/products";
 import { CounterStyled } from "../Style/components/CounterForCardStyled";
 
-const CounterForCard = ({ id }) => {
+const CounterForCard = (id) => {
   const { shopCart, addCount, removeCount } = useContext(BasketContext);
   const [item, setItem] = useState({});
   useEffect(() => {
