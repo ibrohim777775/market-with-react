@@ -15,7 +15,7 @@ import Advertise from "../Components/Advertise";
 import AddComment from "../Components/AddComment";
 import { useDispatch, useSelector } from "react-redux";
 import { BasketContext } from "../context/basket";
-import { addToBasket } from "../store/basket";
+import { addToBasket, updateTotals } from "../store/basket";
 
 import 'react-tabs/style/react-tabs.css';
 import { StyledDiv } from "../Style/containers/AboutProductStyled.js";
@@ -55,18 +55,18 @@ function AboutProduct() {
 
 
   const [displayIsNone, setDisplay] = useState(false);
-  const addToBasket = () => {
-    // if (!shopCart.find((prod) => prod.id === id)) {
-    //   setShopCart([...shopCart, { id: id, count: count }]);
-    // }
+
+
+  const addToBasketHandler = () => {
+
     const payload = {
-      id,
+      id: id,
       name: item.strMeal,
       img: item.strMealThumb,
-      price: id,
       count
     };
-    dispatch(addToBasket(payload))
+    dispatch(addToBasket(payload));
+    dispatch(updateTotals());
     setText('Оформлять');
 
 
@@ -107,7 +107,7 @@ function AboutProduct() {
           </div>
           <div className="product__inners">
             <h6 className="product__text">Цена за уп.</h6>
-            <h5 className="product__cost">{idMeal} ₽</h5>
+            <h5 className="product__cost">{idMeal / 100} ₽</h5>
           </div>
           <div className="product__inners">
             <h6 className="product__text">Кол-во шт в упаковке</h6>
@@ -132,14 +132,14 @@ function AboutProduct() {
           </div>
           <div className='product__inners'>
             <h4 className='card__price-title'>Итого к оплате</h4>
-            <h3 className='cerd__price'>{count * idMeal} ₽</h3>
+            <h3 className='cerd__price'>{count * idMeal / 100} ₽</h3>
           </div>
           <div className='product__inners'>
             {text === 'В корзину'
-              ? <Button onClick={addToBasket} width='194px' height='40px' text={text} />
+              ? <Button onClick={addToBasketHandler} width='194px' height='40px' text={text} />
               :
               <Link to='/shopping-cart'>
-                <Button onClick={addToBasket} width='194px' height='40px' text={text} />
+                <Button onClick={addToBasketHandler} width='194px' height='40px' text={text} />
 
               </Link>
             }

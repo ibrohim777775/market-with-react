@@ -5,28 +5,30 @@ import noImg from "../Assets/images/no-image.svg";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 // import UserContextComponent, { BasketContext } from "../context/basket";
-import { addCount, addToBasket, updateTotals } from '../store/basket';
+import { addCount, addToBasket, updateTotals } from "../store/basket";
 
 import "../Style/components/Card.css";
 import { StyledCard } from "../Style/components/CardStyled";
 
-
 const Card = (props) => {
   // const { shopCart, setShopCart } = useContext(BasketContext);
   const { title, img, desc, price, rate, size, sizeType } = props;
-  const [text, setText] = useState('В корзину');
+  const [text, setText] = useState("В корзину");
   const dispatch = useDispatch();
-
+  const basket = useSelector((state) => state || {});
 
   const clickHandler = () => {
     // if (!shopCart.find((prod) => prod.id === props.id)) {
 
     //   setShopCart([...shopCart, { id: props.id, count: 1 }]);
     // }
-    dispatch(addToBasket(props));
-    dispatch(updateTotals());
-    setText('Купить');
+    // console.log(props.id);
 
+    if (!basket.byId || !basket.byId[props.id]) {
+      dispatch(addToBasket(props));
+      dispatch(updateTotals());
+      setText("Купить");
+    }
   };
   // console.log(basketStore)
   // console.log(props)

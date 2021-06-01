@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/market-with-react/static/css/main.60b7f820.chunk.css",
-    "main.js": "/market-with-react/static/js/main.0fd079be.chunk.js",
-    "main.js.map": "/market-with-react/static/js/main.0fd079be.chunk.js.map",
-    "runtime-main.js": "/market-with-react/static/js/runtime-main.bb8a17ce.js",
-    "runtime-main.js.map": "/market-with-react/static/js/runtime-main.bb8a17ce.js.map",
+    "main.css": "/market-with-react/static/css/main.84c68b22.chunk.css",
+    "main.js": "/market-with-react/static/js/main.b756474a.chunk.js",
+    "main.js.map": "/market-with-react/static/js/main.b756474a.chunk.js.map",
+    "runtime-main.js": "/market-with-react/static/js/runtime-main.04b49f7b.js",
+    "runtime-main.js.map": "/market-with-react/static/js/runtime-main.04b49f7b.js.map",
     "static/css/2.27175f2b.chunk.css": "/market-with-react/static/css/2.27175f2b.chunk.css",
-    "static/js/2.b158d92d.chunk.js": "/market-with-react/static/js/2.b158d92d.chunk.js",
-    "static/js/2.b158d92d.chunk.js.map": "/market-with-react/static/js/2.b158d92d.chunk.js.map",
-    "static/js/3.b9d07190.chunk.js": "/market-with-react/static/js/3.b9d07190.chunk.js",
-    "static/js/3.b9d07190.chunk.js.map": "/market-with-react/static/js/3.b9d07190.chunk.js.map",
+    "static/js/2.e1c0580f.chunk.js": "/market-with-react/static/js/2.e1c0580f.chunk.js",
+    "static/js/2.e1c0580f.chunk.js.map": "/market-with-react/static/js/2.e1c0580f.chunk.js.map",
+    "static/js/3.8f44b8cb.chunk.js": "/market-with-react/static/js/3.8f44b8cb.chunk.js",
+    "static/js/3.8f44b8cb.chunk.js.map": "/market-with-react/static/js/3.8f44b8cb.chunk.js.map",
     "index.html": "/market-with-react/index.html",
     "static/css/2.27175f2b.chunk.css.map": "/market-with-react/static/css/2.27175f2b.chunk.css.map",
-    "static/css/main.60b7f820.chunk.css.map": "/market-with-react/static/css/main.60b7f820.chunk.css.map",
-    "static/js/2.b158d92d.chunk.js.LICENSE.txt": "/market-with-react/static/js/2.b158d92d.chunk.js.LICENSE.txt",
+    "static/css/main.84c68b22.chunk.css.map": "/market-with-react/static/css/main.84c68b22.chunk.css.map",
+    "static/js/2.e1c0580f.chunk.js.LICENSE.txt": "/market-with-react/static/js/2.e1c0580f.chunk.js.LICENSE.txt",
     "static/media/Burger.1c37485b.svg": "/market-with-react/static/media/Burger.1c37485b.svg",
     "static/media/style.css": "/market-with-react/static/media/TTHoves-Regular.495bcecc.woff",
     "static/media/stylesheet.css": "/market-with-react/static/media/TTNormsPro-ThinItalic.c4468192.ttf",
@@ -31,10 +31,10 @@
     "static/media/user-avatar.91780509.svg": "/market-with-react/static/media/user-avatar.91780509.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.bb8a17ce.js",
+    "static/js/runtime-main.04b49f7b.js",
     "static/css/2.27175f2b.chunk.css",
-    "static/js/2.b158d92d.chunk.js",
-    "static/css/main.60b7f820.chunk.css",
-    "static/js/main.0fd079be.chunk.js"
+    "static/js/2.e1c0580f.chunk.js",
+    "static/css/main.84c68b22.chunk.css",
+    "static/js/main.b756474a.chunk.js"
   ]
 }

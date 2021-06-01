@@ -12,31 +12,31 @@ import "../Style/containers/main.css";
 const Main = () => {
   const allItems = ["Все товары", "Все товары категории"];
   const [items, setItems] = useState([]);
-  const basketStore = useSelector(state => state || []);
+  const basketStore = useSelector((state) => state || []);
 
   const fetchItems = (area) => {
     fetch(`https://themealdb.p.rapidapi.com/filter.php?a=${area}`, {
-      "method": "GET",
-      "headers": {
+      method: "GET",
+      headers: {
         "x-rapidapi-key": "3263a16283msh6bfe5b19d610724p10ba1ejsn213622b85edc",
-        "x-rapidapi-host": "themealdb.p.rapidapi.com"
-      }
+        "x-rapidapi-host": "themealdb.p.rapidapi.com",
+      },
     })
-      .then(response => response.json())
-      .then(res => {
+      .then((response) => response.json())
+      .then((res) => {
         // console.log(res);
-        setItems([...res.meals])
+        setItems([...res.meals]);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error(err);
       });
-  }
+  };
   // console.log(items, 'items')
   useEffect(() => {
-    fetchItems('American')
+    fetchItems("American");
   }, []);
 
-  console.log(basketStore)
+  console.log(basketStore);
   return (
     <div>
       <MainPresent />
@@ -44,7 +44,8 @@ const Main = () => {
       <h1>{allItems[0]}</h1>
       <section className="cards">
         {items.map((item, index) => (
-          <Card key={item.idMeal}
+          <Card
+            key={item.idMeal}
             id={item.idMeal}
             title={item.strMeal}
             img={item.strMealThumb}
@@ -52,7 +53,7 @@ const Main = () => {
             price={item.idMeal / 100}
             rate={Math.random * 10}
             size={1}
-            sizeType='kg'
+            sizeType="kg"
           />
         ))}
       </section>
@@ -74,6 +75,6 @@ const Main = () => {
       <Advertise />
     </div>
   );
-}
+};
 
 export default Main;
