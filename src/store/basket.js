@@ -46,8 +46,7 @@ const basketSlice = createSlice({
     },
     removeFromBasket: (basket, action) => {
       let fakeById = {};
-      // delete fakeById[+action.payload.id];
-      // console.log(current(fakeById, "fakeee"));
+
       let fakeArr = basket.arr.filter((item) => {
         return item !== +action.payload.id;
       });
@@ -56,16 +55,12 @@ const basketSlice = createSlice({
           fakeById[item] = { ...basket.byId[item] };
         }
       });
-      // console.log(fakeArr);
-      // console.log(action.payload.id, "iddd");
-      // console.log(fakeById, "fakeiddd");
+
       return {
         ...basket,
         byId: { ...fakeById },
         arr: [...fakeArr],
       };
-      // console.log(basket.byId);
-      // console.log(action);
     },
   },
 });
