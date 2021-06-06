@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore, createSlice, current } from "@reduxjs/toolkit";
 
 const basketSlice = createSlice({
   name: "basket",
@@ -14,7 +14,7 @@ const basketSlice = createSlice({
             // id: action.payload.id,
             name: action.payload.title,
             count: 1,
-            price: action.payload.id / 100,
+            price: Math.ceil(action.payload.id / 100),
             img: action.payload.img,
           },
         },
@@ -26,11 +26,10 @@ const basketSlice = createSlice({
       let priceTotal = 0;
       for (let item in basket.byId) {
         countBasket++;
-        // console.log(countBasket, 'count')
-        let toNumber = +item;
-
-        priceTotal = priceTotal + toNumber / 100;
+        priceTotal =
+          priceTotal + basket.byId[item].price * basket.byId[item].count;
       }
+      // console.log(priceTotal, "priceee");
       return {
         ...basket,
         total: {
@@ -40,13 +39,33 @@ const basketSlice = createSlice({
       };
     },
     addCount: (basket, action) => {
-      basket[action.payload.id].count++;
+      basket.byId[action.payload.id].count++;
     },
     removeCount: (basket, action) => {
-      basket[action.payload.id].count--;
+      basket.byId[+action.payload.id].count--;
     },
     removeFromBasket: (basket, action) => {
-      delete basket[action.payload.id];
+      let fakeById = {};
+      // delete fakeById[+action.payload.id];
+      // console.log(current(fakeById, "fakeee"));
+      let fakeArr = basket.arr.filter((item) => {
+        return item !== +action.payload.id;
+      });
+      fakeArr.filter((item) => {
+        if (basket.byId[item]) {
+          fakeById[item] = { ...basket.byId[item] };
+        }
+      });
+      // console.log(fakeArr);
+      // console.log(action.payload.id, "iddd");
+      // console.log(fakeById, "fakeiddd");
+      return {
+        ...basket,
+        byId: { ...fakeById },
+        arr: [...fakeArr],
+      };
+      // console.log(basket.byId);
+      // console.log(action);
     },
   },
 });

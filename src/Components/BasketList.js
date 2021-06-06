@@ -5,17 +5,27 @@ import CounterForCard from "../Components/CounterForCard";
 import { BasketContext } from "../context/basket";
 
 import products from "../db/products";
+import { removeFromBasket, updateTotals } from "../store/basket";
 
 import { StyledDiv, Btn } from "../Style/components/BasketListStyled";
 
 const BasketList = () => {
   const { shopCart, setShopCart, deleteItem, display } =
     useContext(BasketContext);
-  const [isTrue, setIsTrue] = useState(false);
+  // const [isTrue, setIsTrue] = useState(false);
   const dispatch = useDispatch();
   const store = useSelector((state) => state || {});
   // let items = [];
-  const [items, setItems] = useState([]);
+  // const [items, setItems] = useState([]);
+
+  // const [fake, setFake] = useState(0);
+
+  // useEffect(() => {}, [fake]);
+
+  const removeCount = (item) => {
+    dispatch(removeFromBasket({ id: item }));
+    dispatch(updateTotals());
+  };
 
   // const fetchData = async (id) => {
   //   try {
@@ -54,40 +64,43 @@ const BasketList = () => {
   // useEffect(() => {
   //   updateItems();
   // }, []);
-
+  // console.log(store.arr);
   return (
     <StyledDiv>
-      <section className="shopping__items">
-        <h1>Salom</h1>
-        {store.arr &&
-          store.arr.map((item) => (
-            <section
-              key={item}
-              className="shopping__product"
-              style={{ display: { display } }}
-            >
-              <Btn>
-                <IoClose
-                  onClick={() => deleteItem(store.byId[item].id)}
-                  className="product__remove-from"
+      {store.arr ? (
+        <section className="shopping__items">
+          {store.arr &&
+            store.arr.map((item) => (
+              <section
+                key={item}
+                className="shopping__product"
+                // style={{ display: "block" }}
+              >
+                <Btn>
+                  <IoClose
+                    onClick={() => removeCount(item)}
+                    className="product__remove-from"
+                  />
+                </Btn>
+                <section className="product__img">
+                  <img src={store.byId[item].img} />
+                </section>
+                <h4 className="product__title">{store.byId[item].name}</h4>
+                <CounterForCard
+                  id={item}
+                  // addCount={add}
+                  // removeCount={del}
+                  className="product__counter"
                 />
-              </Btn>
-              <section className="product__img">
-                <img src={store.byId[item].strMealThumb} />
+                <h6 className="product__price">
+                  {store.byId[item].price * store.byId[item].count} ₽
+                </h6>
               </section>
-              <h4 className="product__title">{store.byId[item].title}</h4>
-              <CounterForCard
-                id={item.id}
-                // addCount={add}
-                // removeCount={del}
-                className="product__counter"
-              />
-              <h6 className="product__price">
-                {store.byId[item].price * store.byId[item].count} ₽
-              </h6>
-            </section>
-          ))}
-      </section>
+            ))}
+        </section>
+      ) : (
+        <h1>Корзина пусть</h1>
+      )}
     </StyledDiv>
   );
 };

@@ -18,23 +18,13 @@ const Card = (props) => {
   const basket = useSelector((state) => state || {});
 
   const clickHandler = () => {
-    // if (!shopCart.find((prod) => prod.id === props.id)) {
-
-    //   setShopCart([...shopCart, { id: props.id, count: 1 }]);
-    // }
-    // console.log(props.id);
-
     if (!basket.byId || !basket.byId[props.id]) {
       dispatch(addToBasket(props));
       dispatch(updateTotals());
       setText("Купить");
     }
   };
-  // console.log(basketStore)
-  // console.log(props)
-  // console.log(shopCart);
 
-  // console.log(shopCart);
   return (
     <StyledCard>
       <div className="card__img">
