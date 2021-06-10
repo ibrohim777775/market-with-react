@@ -75,3 +75,4 @@ export const {
   updateTotals,
 } = basketSlice.actions;
 export default basket;
+

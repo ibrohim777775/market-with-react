@@ -7,7 +7,10 @@ overflow: hidden;
 // flex-wrap: wrap;
 padding: 25px 60px 16px 0;
 position: relative;
-  & a{
+  & .active__menu{
+    color: var(--green);
+  }
+  & h5{
     font-size: 23px;
     line-height: 28px;
     text-transform: uppercase;
@@ -34,4 +37,4 @@ position: relative;
     displayL flex;
     flew-wrap: wrap;
   }
-`
+`;

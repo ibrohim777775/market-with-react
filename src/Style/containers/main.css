@@ -1,14 +1,16 @@
-.cards{
+.cards {
   margin: 40px 0 0 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between;
+   */
+  column-gap: 5%;
   min-height: 1470px;
 }
-.card__items{
+.card__items {
   margin-bottom: 55px;
   font-size: 56px;
 }
-.pagination{
+.pagination {
   margin: 60px;
 }

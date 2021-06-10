@@ -13,6 +13,7 @@ const Main = () => {
   const allItems = ["Все товары", "Все товары категории"];
   const [items, setItems] = useState([]);
   const basketStore = useSelector((state) => state || []);
+  const [area, setArea] = useState("American");
 
   const fetchItems = (area) => {
     fetch(`https://themealdb.p.rapidapi.com/filter.php?a=${area}`, {
@@ -33,14 +34,15 @@ const Main = () => {
   };
   // console.log(items, 'items')
   useEffect(() => {
-    fetchItems("American");
-  }, []);
+    fetchItems(area);
+  }, [area]);
 
-  console.log(basketStore);
+  // console.log(basketStore);
+  // console.log(area, "area");
   return (
     <div>
       <MainPresent />
-      <MenuList />
+      <MenuList area={area} setArea={setArea} />
       <h1>{allItems[0]}</h1>
       <section className="cards">
         {items.map((item, index) => (

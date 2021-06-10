@@ -7,9 +7,8 @@ export const StyledCard = styled.div`
   width: 206px;
   height: 378px;
   margin: 0 0 54px 0;
-  &:hover{
+  &:hover {
     box-shadow: 0px 0px 17px 2px #f1f1f1;
-
   }
 
   .card__img {
@@ -29,8 +28,5 @@ export const StyledCard = styled.div`
   }
 
   .card__btn {
-    
-    
   }
-  
 `;
