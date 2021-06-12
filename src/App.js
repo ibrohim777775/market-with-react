@@ -9,6 +9,7 @@ import Header from "./Components/Header";
 import UserAuth from "./Components/UserAuth";
 import NewUserReg from "./Components/NewUserReg";
 import Footer from "./Components/Footer";
+import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import "./Style/App.css";
 import Main from "./Containers/Main";
 import { Provider } from "react-redux";
