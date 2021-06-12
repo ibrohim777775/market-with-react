@@ -49,7 +49,7 @@ function App() {
     <Provider store={basket}>
       <UserContext>
         <div>
-          <BrowserRouter>
+          <BrowserRouter basename="/market-with-react">
             <Header showAuth={showAuth} headerItems={HeaderMenuItems} />
             <UserAuth
               showAuth={showAuth}
