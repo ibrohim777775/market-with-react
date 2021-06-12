@@ -69,7 +69,7 @@ function App() {
                     component={item.component}
                   />
                 ))}
-                <Redirect to="/home" />
+                <Redirect to="/" />
               </div>
             </main>
             <Footer
