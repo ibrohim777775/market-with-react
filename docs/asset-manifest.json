@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/market-with-react/static/css/main.1858a07c.chunk.css",
+    "main.css": "/market-with-react/static/css/main.de46d0ce.chunk.css",
     "main.js": "/market-with-react/static/js/main.6098e25f.chunk.js",
     "main.js.map": "/market-with-react/static/js/main.6098e25f.chunk.js.map",
     "runtime-main.js": "/market-with-react/static/js/runtime-main.bb8a17ce.js",
@@ -12,7 +12,7 @@
     "static/js/3.b9d07190.chunk.js.map": "/market-with-react/static/js/3.b9d07190.chunk.js.map",
     "index.html": "/market-with-react/index.html",
     "static/css/2.27a42b37.chunk.css.map": "/market-with-react/static/css/2.27a42b37.chunk.css.map",
-    "static/css/main.1858a07c.chunk.css.map": "/market-with-react/static/css/main.1858a07c.chunk.css.map",
+    "static/css/main.de46d0ce.chunk.css.map": "/market-with-react/static/css/main.de46d0ce.chunk.css.map",
     "static/js/2.e2ec4b17.chunk.js.LICENSE.txt": "/market-with-react/static/js/2.e2ec4b17.chunk.js.LICENSE.txt",
     "static/media/Burger.1c37485b.svg": "/market-with-react/static/media/Burger.1c37485b.svg",
     "static/media/style.css": "/market-with-react/static/media/TTHoves-Regular.495bcecc.woff",
@@ -34,7 +34,7 @@
     "static/js/runtime-main.bb8a17ce.js",
     "static/css/2.27a42b37.chunk.css",
     "static/js/2.e2ec4b17.chunk.js",
-    "static/css/main.1858a07c.chunk.css",
+    "static/css/main.de46d0ce.chunk.css",
     "static/js/main.6098e25f.chunk.js"
   ]
 }
