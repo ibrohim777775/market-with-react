@@ -11,7 +11,7 @@ import Vacansies from "./Containers/Vacansies";
 import UserInfo from "./Containers/UserInfo";
 
 const Routes = [
-  { exact: true, path: "/home", component: Main },
+  { exact: true, path: "/", component: Main },
   { exact: true, path: "/delivery", component: Delivery },
   { exact: true, path: "/faq", component: Support },
   { exact: true, path: "/payment", component: Payment },
@@ -20,8 +20,6 @@ const Routes = [
   { exact: true, path: "/ordering", component: Ordering },
   { exact: true, path: "/vacansies", component: Vacansies },
   { exact: true, path: "/user", component: UserInfo },
-
-
 ];
 
 export default Routes;
