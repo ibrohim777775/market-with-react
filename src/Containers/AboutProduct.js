@@ -27,14 +27,15 @@ function AboutProduct() {
   const [item, setItem] = useState({})
   const [count, setCount] = useState(1);
   const dispatch = useDispatch();
-  const basketStore = useSelector(state => state || [])
+  const basketStore = useSelector(state => state || []);
+  const API_KEY = '';
 
 
   const getProductInfo = (id) => {
     fetch(`https://themealdb.p.rapidapi.com/lookup.php?i=${id}`, {
       "method": "GET",
       "headers": {
-        "x-rapidapi-key": "3263a16283msh6bfe5b19d610724p10ba1ejsn213622b85edc",
+        "x-rapidapi-key": API_KEY,
         "x-rapidapi-host": "themealdb.p.rapidapi.com"
       }
     })
