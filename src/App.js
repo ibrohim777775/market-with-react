@@ -20,7 +20,7 @@ function App() {
   const [newUserDisp, setnewUserDisp] = useState("none");
   const [circleStyle, setcircleStyle] = useState("");
   const HeaderMenuItems = [
-    { title: "Меню", path: "/home" },
+    { title: "Меню", path: "/" },
     { title: "Доставка", path: "/delivery" },
     { title: "Оплата", path: "/payment" },
     { title: "Бронь стола", path: "/booking" },

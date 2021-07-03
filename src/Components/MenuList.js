@@ -9,12 +9,13 @@ const MenuList = ({ area, setArea }) => {
   const [showItems, setShowItems] = useState("nowrap");
   const [activeColor, setActiveColor] = useState();
   const [active, setActive] = useState("");
+  const API__KEY = "63a2d1597bmsh4dfbf08b6a074dfp15f5bdjsn2ea3e8278a96";
 
   useEffect(() => {
     fetch("https://themealdb.p.rapidapi.com/list.php?a=list", {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "3263a16283msh6bfe5b19d610724p10ba1ejsn213622b85edc",
+        "x-rapidapi-key": API__KEY,
         "x-rapidapi-host": "themealdb.p.rapidapi.com",
       },
     })
